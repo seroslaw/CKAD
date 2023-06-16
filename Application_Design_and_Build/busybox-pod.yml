@@ -4,8 +4,7 @@ metadata:
   name: busybox-pod
 spec:
   containers:
-  -name: busybox
-  image: busybox
+  - name: busybox
+    image: busybox
 
 restartPolicy: Never
-

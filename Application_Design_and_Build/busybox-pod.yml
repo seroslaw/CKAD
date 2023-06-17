@@ -7,4 +7,4 @@ spec:
   - name: busybox
     image: busybox
 
-restartPolicy: Never
+  restartPolicy: Never

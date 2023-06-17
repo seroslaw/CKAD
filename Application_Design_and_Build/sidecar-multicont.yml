@@ -13,7 +13,7 @@ spec:
     args: ["-c", "while true; do date >> /var/log/app.log; sleep 5; done"]
     volumeMounts:
     - name: logs
-    mountPath: /var/log
+      mountPath: /var/log
 
   - name: log-exporter-sidecar
     image: nginx

@@ -5,7 +5,7 @@ metadata:
   labels:
     purpose: demonstrate-command
 spec:
-  containters:
+  containers:
   - name: command-demo-container
     image: debian
     command: ["printenv"]

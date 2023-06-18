@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: countdown-job
 spec:
+  completions: 5
   template:
     metadata:
       name: countdown-pod

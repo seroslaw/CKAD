@@ -14,5 +14,5 @@ spec:
   volumes:
     - name: test-volume
       hostPath:
-        path: /data #directory on host
+        path: /usr/local #directory on host
         type: Directory #optional

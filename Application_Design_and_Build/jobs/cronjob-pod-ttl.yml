@@ -1,16 +1,17 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: cron-test
+  name: cron-test-ttl
 spec:
   schedule: "*/1 * * * *"
   jobTemplate:
     spec:
+      ttlSecondsAfterFinished: 10
       template:
         spec:
           containers:
-            - name: counter
-              image: centos:7
+            - name: cron-test
+              image: busybox
               args:
                 - /bin/sh
                 - -c

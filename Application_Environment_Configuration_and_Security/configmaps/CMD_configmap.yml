@@ -1,20 +1,21 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: configmap-demo-pod-env
+  name: configmap-demo-pod-cmd
 spec:
   containers:
     - name: demo
-      image: alpine
-      command: ["sleep", "3600"]
+      image: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["echo UI Properties - $(UI_PROPERTIES_FILE_NAME)"]
       env:
         - name: PLAYER_INITIAL_LIVES
           valueFrom:
             configMapKeyRef:
               name: game-demo
               key: player_initial_lives
-        - name: GAME_PROPERTIES
+        - name: UI_PROPERTIES_FILE_NAME
           valueFrom:
             configMapKeyRef:
               name: game-demo
-              key: game.properties
+              key: ui_properties_file_name

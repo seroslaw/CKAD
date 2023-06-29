@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: configmap-demo-pod-vol
+spec:
+  containers:
+    - name: demo
+      image: busybox
+      command: ["/bin/sh", "-c"]
+      args: ["ls /config/"]
+
+      volumeMounts:
+      - name: config
+        mountPath: "/config"
+        readOnly: true
+  volumes:
+    - name: config
+      configMap:
+        name: game-demo
+        items:
+        - key: "game.properties"
+          path: "game.properties"
+        - key: "user-interface.properties"
+          path: "user-interface.properties"

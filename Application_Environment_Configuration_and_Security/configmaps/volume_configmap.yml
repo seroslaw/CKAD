@@ -7,7 +7,7 @@ spec:
     - name: demo
       image: busybox
       command: ["/bin/sh", "-c"]
-      args: ["ls /config/"]
+      args: ["cat /config/game.properties"]
 
       volumeMounts:
       - name: config

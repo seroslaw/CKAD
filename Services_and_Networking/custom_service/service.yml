@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: custom-service
+spec:
+  ports:
+    - port: 8080      # na którym porcie serwis nasługuje ruchu
+      targetPort: 80  # na który port serwis będzie kierował ruch
+

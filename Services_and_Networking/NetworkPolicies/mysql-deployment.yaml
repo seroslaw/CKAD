@@ -10,7 +10,7 @@ spec:
   selector:
     app: wordpress
     tier: mysql
-  ClusterIP: None           # ustawiamy ten parametr po to aby dopuścić ruch tylko w klastrze do tej bazy danych
+  clusterIP: None           # ustawiamy ten parametr po to aby dopuścić ruch tylko w klastrze do tej bazy danych
 
 ---
 apiVersion: v1

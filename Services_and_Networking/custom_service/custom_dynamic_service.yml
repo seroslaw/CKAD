@@ -4,7 +4,7 @@ metadata:
   name: custom-dynamic-service
 spec:
   selector:
-    env: prod
+    environment: production
   ports:
     - port: 8080      # na którym porcie serwis nasługuje ruchu
       targetPort: 80  # na który port serwis będzie kierował ruch

@@ -11,13 +11,13 @@ spec:
   selector:
     matchLabels:
       app: nginx-1.0
-      env: prod
+      environment: production
   
   template:
     metadata:
       labels:
         app: nginx-1.0
-        env: prod
+        environment: production
     spec:
       containers:
         - name: nginx

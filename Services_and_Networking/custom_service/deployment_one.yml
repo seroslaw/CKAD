@@ -3,20 +3,17 @@ kind: Deployment
 metadata:
   name: nginx-deployment-1.0
   labels:
-    app: nginx-1.0
-    env: prod
+    environment: production
 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-1.0
       environment: production
   
   template:
     metadata:
       labels:
-        app: nginx-1.0
         environment: production
     spec:
       containers:

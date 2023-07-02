@@ -6,14 +6,12 @@ metadata:
     app: nginx-1.1
     env: prod
 
-
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: nginx-1.1
       env: prod
-  
   template:
     metadata:
       labels:

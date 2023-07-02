@@ -10,7 +10,7 @@ spec:
   selector:
     app: wordpress
     tier: frontend
-  type: LoadBalance
+  type: LoadBalancer
 
 ---
 apiVersion: v1
